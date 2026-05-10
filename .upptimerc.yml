@@ -17,11 +17,12 @@ sites:
     maxResponseTime: 30000
 
 # ── Schedule ──────────────────────────────────────────────────────────────────
-# Ping once per hour ONLY during 7:30 AM – 11:30 PM IST (02:00–18:00 UTC).
-# Services are allowed to sleep naturally from ~11:30 PM to ~7:30 AM IST,
-# conserving Render free-tier instance hours.
+# Ping every 20 min during 7:30 AM – 11:30 PM IST (02:00–17:59 UTC).
+# 20-min interval: service awake 15 min, sleeps 5 min → 75% duty cycle.
+# Estimated usage: 2 services × 16 hrs × 0.75 × 30 days ≈ 720 hrs/month (< 750).
+# Maintenance window: 11:30 PM – 7:30 AM IST — no pings, services sleep freely.
 workflowSchedule:
-  uptime: "0 2-18 * * *"       # hourly, 02:00–18:00 UTC = 07:30–23:30 IST
+  uptime: "*/20 2-17 * * *"    # every 20 min, 02:00–17:59 UTC = 07:30 AM–11:29 PM IST
   graphs: "0 19 * * *"          # generate graphs at 00:30 IST (off-peak)
   responseTime: "0 19 * * *"    # response-time graph daily at 00:30 IST
   summary: "0 19 * * *"         # update README summary daily at 00:30 IST

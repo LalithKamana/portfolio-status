@@ -1,7 +1,7 @@
 name: Uptime CI
 on:
   schedule:
-    - cron: "0 2-18 * * *"    # hourly 02:00–18:00 UTC = 07:30–23:30 IST
+    - cron: "*/20 2-17 * * *"   # every 20 min, 02:00–17:59 UTC = 07:30 AM–11:29 PM IST
   repository_dispatch:
     types: [uptime]
   workflow_dispatch:
