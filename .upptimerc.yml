@@ -1,0 +1,47 @@
+# Upptime configuration for Portfolio Tracker
+# Docs: https://upptime.js.org/docs/configuration
+
+owner: LalithKamana
+repo: portfolio-status
+
+# ── Sites to monitor ──────────────────────────────────────────────────────────
+sites:
+  - name: Portfolio Gateway
+    url: https://portfolio-gateway.onrender.com/health
+    # Render free tier takes up to 30s to cold-start; mark degraded (yellow)
+    # only beyond 30s so we don't get false "slow" alerts on first wake-up
+    maxResponseTime: 30000
+
+  - name: Portfolio Data
+    url: https://portfolio-data-tqlm.onrender.com/health
+    maxResponseTime: 30000
+
+# ── Schedule ──────────────────────────────────────────────────────────────────
+# Ping once per hour ONLY during 7:30 AM – 11:30 PM IST (02:00–18:00 UTC).
+# Services are allowed to sleep naturally from ~11:30 PM to ~7:30 AM IST,
+# conserving Render free-tier instance hours.
+workflowSchedule:
+  uptime: "0 2-18 * * *"       # hourly, 02:00–18:00 UTC = 07:30–23:30 IST
+  graphs: "0 19 * * *"          # generate graphs at 00:30 IST (off-peak)
+  responseTime: "0 19 * * *"    # response-time graph daily at 00:30 IST
+  summary: "0 19 * * *"         # update README summary daily at 00:30 IST
+  staticSite: "0 20 * * *"      # rebuild status page at 01:30 IST
+  updateTemplate: "0 20 * * 0"  # check for Upptime template updates weekly
+
+# ── Status page ───────────────────────────────────────────────────────────────
+status-website:
+  name: Portfolio Tracker Status
+  introTitle: "Portfolio Tracker — Service Status"
+  introMessage: "Live uptime for Portfolio Gateway and Portfolio Data services hosted on Render."
+  theme: light
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/LalithKamana/portfolio-status
+
+# ── Notifications ─────────────────────────────────────────────────────────────
+# GitHub Issues are created automatically when a service goes down.
+# The issue is closed automatically when the service recovers.
+assignees:
+  - LalithKamana
