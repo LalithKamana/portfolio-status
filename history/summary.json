@@ -5,18 +5,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/portfolio-gateway.onrender.com.ico",
     "slug": "portfolio-gateway",
     "status": "down",
-    "uptime": "27.99%",
-    "uptimeDay": "27.99%",
-    "uptimeWeek": "27.99%",
-    "uptimeMonth": "27.99%",
-    "uptimeYear": "27.99%",
-    "time": 4300,
-    "timeDay": 4300,
-    "timeWeek": 4300,
-    "timeMonth": 4300,
-    "timeYear": 4300,
+    "uptime": "4.93%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "4.93%",
+    "uptimeMonth": "4.93%",
+    "uptimeYear": "4.93%",
+    "time": 3290,
+    "timeDay": 259,
+    "timeWeek": 3290,
+    "timeMonth": 3290,
+    "timeYear": 3290,
     "dailyMinutesDown": {
-      "2026-05-10": 229
+      "2026-05-11": 1248,
+      "2026-05-10": 469
     }
   },
   {
@@ -25,18 +26,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/portfolio-data-tqlm.onrender.com.ico",
     "slug": "portfolio-data",
     "status": "down",
-    "uptime": "28.01%",
-    "uptimeDay": "28.01%",
-    "uptimeWeek": "28.01%",
-    "uptimeMonth": "28.01%",
-    "uptimeYear": "28.01%",
-    "time": 7282,
-    "timeDay": 7282,
-    "timeWeek": 7282,
-    "timeMonth": 7282,
-    "timeYear": 7282,
+    "uptime": "4.93%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "4.93%",
+    "uptimeMonth": "4.93%",
+    "uptimeYear": "4.93%",
+    "time": 5489,
+    "timeDay": 111,
+    "timeWeek": 5489,
+    "timeMonth": 5489,
+    "timeYear": 5489,
     "dailyMinutesDown": {
-      "2026-05-10": 229
+      "2026-05-11": 1248,
+      "2026-05-10": 469
     }
   }
 ]
