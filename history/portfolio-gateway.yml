@@ -1,7 +1,7 @@
 url: https://portfolio-gateway.onrender.com/health
-status: up
-code: 200
-responseTime: 12716
-lastUpdated: 2026-07-09T20:42:34.701Z
+status: down
+code: 503
+responseTime: 101
+lastUpdated: 2026-07-10T08:59:12.092Z
 startTime: 2026-05-10T14:41:29.777Z
 generator: Upptime <https://github.com/upptime/upptime>
